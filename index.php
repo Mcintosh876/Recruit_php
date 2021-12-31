@@ -71,7 +71,7 @@ $results = $crud->getGender();
 </div>
 
 <br>
-<button type="Submit" name="submit" class="btn btn-success btn-block">Submit Application</button>
+<button type="submit" name="submit" class="btn btn-success btn-block">Submit Application</button>
 </form>
 </div>
 
