@@ -3,7 +3,7 @@ require_once 'includes/auth_check.php';
 require_once 'db/conn.php';
 
 if(isset($_POST['submit'])){
-    $id = $_POST['id'];
+    
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $dob = $_POST['dob'];
@@ -11,12 +11,13 @@ if(isset($_POST['submit'])){
     $contact = $_POST['phone'];
     $gender = $_POST['gender']; 
     $adress = $_POST['adress'];
+    $id = $_POST['id'];
 
 
-    $result = $crud-> editAttendee($id, $fname,$lname,$dob,$email,$contact,$gender,$adress);
+    $result = $crud-> editAttendee($fname,$lname,$dob,$email,$contact,$gender,$adress,$id);
 
     if($result){
-        header("Location: viewrecords.php");
+        header("location: viewrecords.php");
     }
     else{
         include 'includes/errormessage.php';

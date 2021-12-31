@@ -23,10 +23,7 @@ $results = $crud->getGender();
   <input type="text" class="form-control" id="dob" name="dob" >
 </div>
   
-  <div class="form-group">
-  <label for="LastName">Address</label>
-  <input required type="text" class="form-control" id="last name" name="lastname" >
-  </div>
+ 
 
 </div>
 <div class="form-group">

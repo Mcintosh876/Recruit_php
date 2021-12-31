@@ -7,7 +7,7 @@ $results = $crud->getApplicant();
 if(!isset($_GET['id']))
 {
     include 'includes/errormessage.php';
-    header("Location: viewrecords.php");
+    header("location: viewrecords.php");
 }
 else{
     $id= $_GET['id'];
@@ -52,7 +52,7 @@ else{
 </div>
 <div class="form-group">
   <label for="Adress">Address</label>
-  <input required type="text" class="form-control" id="adress" name="adress" >
+  <input required type="text" class="form-control"  value= "<?php echo $attendee['adress'] ?>"id="adress" name="adress" >
 </div>
 <br>
 

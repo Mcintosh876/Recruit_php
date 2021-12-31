@@ -3,6 +3,8 @@ $title = 'Ascendancy';
 require_once 'includes/header.php';
 require_once 'db/conn.php';
 require_once 'sendemail.php';
+?>
+<?php
 
 
 if(isset($_POST['submit'])){
@@ -23,7 +25,7 @@ move_uploaded_file($oring_file,$destination);
 
 
   $isSuccess = $crud->insertAttendee($fname,$lname,$dob,$email,$contact,$gender,$destination,$adress);
-  $GenderName = $crud->getGenderById($gender);
+  $gender = $crud->getGenderById($gender);
 
   if($isSuccess){
     SendEmail::sendMail($email,'Recruitment 2021', 'You Have Succesfully Registerd for if scucessfull we will contact you');
@@ -35,12 +37,12 @@ move_uploaded_file($oring_file,$destination);
   }
 }
 ?>
-   
-<img src="<?php echo $destination ?>" class = "rounded" style = "width:20%; heaght: 20%"/>
+  
+<img src="<?php echo $destination ?>" class = "rounded" style = "width:20%; heaght: 20%">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><?php echo $_POST['firstname']. ' '. $_POST['lastname'] ?></h5>
-    <h6 class="card-subtitle mb-2 text-muted"><?php echo $GenderName['name']; ?> </h6>
+    <h6 class="card-subtitle mb-2 text-muted"><?php echo $gender['name']; ?> </h6>
     <p class="card-text">Date of Birth: <?php echo $_POST['dob'] ?></p>
     <p class="card-text">Email: <?php echo $_POST['email'] ?></p>
     <p class="card-text">Contact Number: <?php echo $_POST['phone'] ?></p>
@@ -51,8 +53,9 @@ move_uploaded_file($oring_file,$destination);
 </div>
                       <a href="viewrecords.php" class="btn btn-info">Back To List</a>
                       <a href="edit.php?id=<?php echo $result['attendee_id'] ?>" class="btn btn-warning">Edit</a>
-                      <a onclick="return confirm('Are you Sure You Want To delete Record?')" href="delete.php?id=<?php echo $result['attendee_id'] ?>" class="btn btn-danger">Delete</a>
-  
+                      <a onclick="return confirm('Are you Sure You Want To delete Record?')" href="delete.php? id=<?php echo $result['attendee_id'] ?>" class="btn btn-danger">Delete</a>
+          
+                      
 <br>
 <br>
 <br>

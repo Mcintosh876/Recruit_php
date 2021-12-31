@@ -4,14 +4,14 @@ require_once 'db/conn.php';
 
 if(!$_GET['id']){
     include 'includes/errormessage.php';
-    header("Location: viewrecords.php");
+    header("location: viewrecords.php");
 }else{
 
     $id=$_GET['id'];
 
     $result = $crud->deleteApplicant($id);
     if($result){
-        header("Location: viewrecords.php");
+        header("location: viewrecords.php");
     }
     else{
         echo'error';

@@ -31,13 +31,13 @@ function __construct($conn){
         }
      }
 
-     public function editAttendee($id, $fname,$lname,$dob,$email,$contact,$gender,$adress){
+     public function editAttendee($fname,$lname,$dob,$email,$contact,$gender,$adress,$id){
         try{
-         $sql = "UPDATE`attendee` SET `firstname`=:fname,`lastname`=:lname,`dateofbirth`=:dob,`emailaddress`=:email,`contactnumber`=:contact,`gender_id`=:gender, adress=:adress WHERE attendee_id = :id " ;
+         $sql = "UPDATE`attendee` SET `firstname`=:fname,`lastname`=:lname,`dateofbirth`=:dob,`emailaddress`=:email,`contactnumber`=:contact,`gender_id`=:gender, `adress`=:adress WHERE `attendee_id` = :id " ;
 
          $stmt = $this->db->prepare($sql);
             
-            $stmt->bindparam(':id',$id);
+            
             $stmt->bindparam(':fname',$fname);
             $stmt->bindparam(':lname',$lname);
             $stmt->bindparam(':dob',$dob);
@@ -45,7 +45,7 @@ function __construct($conn){
             $stmt->bindparam(':contact',$contact);
             $stmt->bindparam(':gender',$gender);
             $stmt->bindparam(':adress',$adress);
-
+            $stmt->bindparam(':id',$id);
 
             $stmt->execute();
             return true;
