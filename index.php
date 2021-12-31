@@ -1,5 +1,5 @@
 <?php 
-$title = 'Index';
+$title = 'index';
 require_once 'includes/header.php';
 require_once 'db/conn.php';
 $results = $crud->getGender();
@@ -19,7 +19,7 @@ $results = $crud->getGender();
   
 </div>
 <div class="form-group">
-   <label for="DOB">Date Of Birth</label>
+   <label for="dob">Date Of Birth</label>
   <input type="text" class="form-control" id="dob" name="dob" >
 </div>
   
