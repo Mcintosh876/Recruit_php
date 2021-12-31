@@ -1,5 +1,5 @@
 <?php
-require_once 'C:\xampp\htdocs\Attendance\vendor\autoload.php';
+//require_once 'C:\xampp\htdocs\Attendance\vendor\autoload.php';
 
 class SendEmail{
 
