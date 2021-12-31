@@ -9,12 +9,12 @@ $results = $crud->getGender();
 <form method="post" enctype="multipart/form-data" action="success.php">
 <div class="form-control">   
 <div class="form-group">
-   <label for="FirstName">First Name</label>
+   <label for="firstfame">First Name</label>
    <input required type="text" class="form-control" id="first name"name="firstname"  >
  
 </div>
 <div class="form-group">
-  <label for="LastName">Last Name</label>
+  <label for="lastname">Last Name</label>
   <input required type="text" class="form-control" id="last name" name="lastname" >
   
 </div>
@@ -36,8 +36,8 @@ $results = $crud->getGender();
 </div>
 
  <div class="form-group">
-  <label for="Email">Email address</label>
-  <input required type="email" class="form-control" id="Email" name="email"
+  <label for="email">Email address</label>
+  <input required type="email" class="form-control" id="email" name="email"
   aria-describedlby="emailHelp">
   <small id="emailHelp" class="form-text text-muted">Email Adrress must be Uniqe to Applicant</small>
 </div>
@@ -49,7 +49,7 @@ $results = $crud->getGender();
   <small id="phoneHelp" class="form-text text-muted"> Required</small>
   
   <div class="form-group">
-  <label for="Adress">Address</label>
+  <label for="adress">Address</label>
   <input required type="text" class="form-control" id="adress" name="adress" >
 </div>
 <br>
