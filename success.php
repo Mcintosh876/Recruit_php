@@ -1,5 +1,5 @@
 <?php 
-$title = 'Ascendancy';
+$title = 'ascendancy';
 require_once 'includes/header.php';
 require_once 'db/conn.php';
 require_once 'sendemail.php';
@@ -38,7 +38,7 @@ move_uploaded_file($oring_file,$destination);
 }
 ?>
   
-<img src="<?php echo $destination ?>" class = "rounded" style = "width:20%; heaght: 20%">
+<img src="<?php echo $destination ?>" class = "rounded" style = "width:30%; heaght: 25%">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><?php echo $_POST['firstname']. ' '. $_POST['lastname'] ?></h5>
